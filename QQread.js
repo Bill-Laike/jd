@@ -244,11 +244,11 @@ if (!qqreadbdArr[0]) {
           if (task.data && dk.doneFlag == 0)
               qqreadsign2();// 签到翻倍
 }    
-     else if (i == 8&&CASH>=1&&task.data.user.amount >= CASH*10000&&nowTimes.getHours() ==23){     
+     else if (i == 8&&CASH>=1&&task.data.user.amount >= CASH*10000&&nowTimes.getHours() ==11){     
               qqreadwithdraw();//现金提现
 }
 
-     else if (i == 9&&nowTimes.getHours() ==23){
+     else if (i == 9&&nowTimes.getHours() ==21){
               qqreadtrans();//今日收益累计
 }
      else if (i == 11 ){   
