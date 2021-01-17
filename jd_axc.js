@@ -1,5 +1,6 @@
+*/搬改code1 
  */
-const $ = new Env('工业品爱消除');
+const $ = new Env('京东爱消除');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let inviteCodes = [
