@@ -1,6 +1,6 @@
 /*
 京东炸年兽🧨lxk0310--re cod
-活动地址：京东app左侧浮动窗口3-2
+活动地址：京东app左侧浮动窗口3-3
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
