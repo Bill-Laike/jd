@@ -1,5 +1,5 @@
 /*
-京东炸年兽🧨lxk0310脚本--re codes均来自羊毛群
+京东炸年兽🧨lxk0310脚本--re codes均来自羊毛群8-7
 活动地址：京东app左侧浮动窗口
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
