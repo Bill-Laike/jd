@@ -1,5 +1,5 @@
 /*
-京东炸年兽🧨lxk0310脚本--re codes均来自羊毛群8-7
+京东炸年兽🧨lxk0310脚本--re codes均来自羊毛群
 活动地址：京东app左侧浮动窗口
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
@@ -31,7 +31,7 @@ if ($.isNode()) {
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
   `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtIbuL6F3BCQf6uq_AkxWIYgbpOdZmk6nanFqtQVQ6TsVRNZDxrMA@cgxZdTXtI7_T6w7OWwKo7Pg1J-PQF3zlFOS5rbl2cfwiDTeqAupAC3_WYLk@cgxZdTXtIbKI4wfMDQKuuSn6KyPMx5wv-tjC2zX6C6yf3wcDoTkxJK27WXs@cgxZdTXtQvK6mHSxXV7LsIrtMTHYTpzkLYG6zCsU5QSqLkFqJQmYjH0@cgxZdTXtI7vZ61jAC1CvvUUeJTDEe_kB1qWm_XMrPzMUT7oK2dyuw6R_Kvc@cgxZdTXtI-uM71rADVf66wEWq3MufKoPPnu3McdKpYbWwVzIElBq4_4Ml9I@cgxZdTXtIbOLuAbPWQKq6beQO9uws3x9bvUOCBOqYwIl-KG1WiKv0GvtwHI`,
-  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtILjS7A7MXAKq7COHmEsxJfepIi871AhMRMdg1fLvm1R3mvU3Sc4@cgxZLmKLIb_T4wzICQ3Gr4g3uSoF_QBirf9UKMTFOXaq2UXhKA@cgxZLmmEIrze6grPCwfGr480Zh5pyDdd7vhTYwknMR5iQV0FoQ@cgxZLmCKIbPa4wvPC2r0owoO4fzAqcwTQ_80vx0_KpdnVg@cgxZdTXtIO-J6w6YCAat5iSS-YUO5fGvaS3tYuvqnw97ZtgdbfSqnlzIJ2E@cgxZdTXtIOzTvg3LCQD_58CRk80LqHQu7Shzjx5XlXtRDnsog8mJciVOto8`
+  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtILjS7A7MXAKq7COHmEsxJfepIi871AhMRMdg1fLvm1R3mvU3Sc4@cgxZLmKLIb_T4wzICQ3Gr4g3uSoF_QBirf9UKMTFOXaq2UXhKA@cgxZLmmEIrze6grPCwfGr480Zh5pyDdd7vhTYwknMR5iQV0FoQ@cgxZLmCKIbPa4wvPC2r0owoO4fzAqcwTQ_80vx0_KpdnVg@cgxZdTXtIO-J6w6YCAat5iSS-YUO5fGvaS3tYuvqnw97ZtgdbfSqnlzIJ2E@cgxZdTXtIOzTvg3LCQD_58CRk80LqHQu7Shzjx5XlXtRDnsog8mJciVOto8@M7VjACAah6pagJGzjBrUo7Yi9UJAFs0_M1c6PRzvCTibczoU`
 ];
 !(async () => {
   await requireConfig();
