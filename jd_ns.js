@@ -1,6 +1,6 @@
 /*
 京东炸年兽🧨lxk0310--re cod
-活动地址：京东app左侧浮动窗口
+活动地址：京东app左侧浮动窗口3-2
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
@@ -32,7 +32,7 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtIbuL6F3BCQf6uq_AkxWIYgbpOdZmk6nanFqtQVQ6TsVRNZDxrMA@cgxZdTXtIO-O6QmYDVf67KCEJ19JcybuMB2_hYu8NSNQg0oS2Z_FpMce45g@cgxZdTXtILiLvg7OAASp61meehou4OeZvqbjghsZlc3rI5SBk7b3InUqSQ0`,
+  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtIbuL6F3BCQf6uq_AkxWIYgbpOdZmk6nanFqtQVQ6TsVRNZDxrMA@cgxZdTXtI7_T6w7OWwKo7Pg1J-PQF3zlFOS5rbl2cfwiDTeqAupAC3_WYLk@cgxZdTXtILiLvg7OAASp61meehou4OeZvqbjghsZlc3rI5SBk7b3InUqSQ0`,
   `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtILjS7A7MXAKq7COHmEsxJfepIi871AhMRMdg1fLvm1R3mvU3Sc4@cgxZdTXtIO-O6QmYDVf67KCEJ19JcybuMB2_hYu8NSNQg0oS2Z_FpMce45g@cgxZdTXtILiLvg7OAASp61meehou4OeZvqbjghsZlc3rI5SBk7b3InUqSQ0`
 ];
 !(async () => {
