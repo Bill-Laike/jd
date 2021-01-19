@@ -1,9 +1,8 @@
 /*
  * @Author: shylocks https://github.com/shylocks
- * @Date: 2021-01-17 16:25:41
+ * @Date: 2021-01-17 16:25:41--re code 852493
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-18 18:25:41
- * @re-code 852493
  */
 /*
 东东爱消除，完成所有任务+每日挑战
@@ -11,6 +10,7 @@
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 
+ */
 const $ = new Env('东东爱消除');
 const notify = $.isNode() ? require('./sendNotify.js') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -380,9 +380,11 @@ function beginLevel() {
                 await $.wait(30000)
                 await endLevel()
               } else if (data.code === 20001) {
+                $.strength = 0
                 console.log(`关卡开启失败，体力不足`)
               } else {
-                console.log(`关卡开启失败，错误信息：${JSON.stringify(data)}`)
+                $.strength = 0
+                // console.log(`关卡开启失败，错误信息：${JSON.stringify(data)}`)
               }
             }
           }
@@ -502,7 +504,7 @@ function finishTask(taskId) {
                 }
                 console.log(msg)
               } else {
-                console.log(`任务完成失败，错误信息：${JSON.stringify(data)}`)
+                console.log(`暂无每日挑战任务`)
               }
             }
           }
