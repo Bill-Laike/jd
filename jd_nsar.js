@@ -1,6 +1,6 @@
 /*
 京东炸年兽AR
-活动时间:2021-1-18至2021-2-11
+活动时间:2021-1-18至2021-2-11  re-code
 活动入口:https://wbbny.m.jd.com/babelDiy/Zeus/2cKMj86srRdhgWcKonfExzK4ZMBy/index.html
 活动地址：京东app左侧浮动窗口
 已支持IOS双京东账号,Node.js支持N个京东账号
@@ -33,8 +33,9 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-  `cgxZaDXWZPCmiUa2akPVmFMI27K6antJzucULQPYNim_BPEW1Dwd`,
-  `cgxZaDXWZPCmiUa2akPVmFMI27K6antJzucULQPYNim_BPEW1Dwd`
+  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtIbuL6F3BCQf6uq_AkxWIYgbpOdZmk6nanFqtQVQ6TsVRNZDxrMA@cgxZdTXtI7_T6w7OWwKo7Pg1J-PQF3zlFOS5rbl2cfwiDTeqAupAC3_WYLk@cgxZdTXtIbKI4wfMDQKuuSn6KyPMx5wv-tjC2zX6C6yf3wcDoTkxJK27WXs@cgxZdTXtQvK6mHSxXV7LsIrtMTHYTpzkLYG6zCsU5QSqLkFqJQmYjH0@cgxZdTXtI7vZ61jAC1CvvUUeJTDEe_kB1qWm_XMrPzMUT7oK2dyuw6R_Kvc@cgxZdTXtI-uM71rADVf66wEWq3MufKoPPnu3McdKpYbWwVzIElBq4_4Ml9I@cgxZdTXtIbOLuAbPWQKq6beQO9uws3x9bvUOCBOqYwIl-KG1WiKv0GvtwHI@cgxZdTXtdcK6lHCwfm3IvpsgjbJZf4JYuTOj2lP8rIAcEvSkzdSGGmA@cgxZdTXtILzYuQ_MWVSo7U_dna4wiIMdDR0uy16D2BmRaXbm0sjp6-fPVmk`,
+  `cgxZdTXtIrrYvFqbCQL9ucqdEXd4_Ylfbq7iG6fqOKDsLjb7tYTFg6kWCQ4@cgxZdTXtILjS7A7MXAKq7COHmEsxJfepIi871AhMRMdg1fLvm1R3mvU3Sc4@cgxZLmKLIb_T4wzICQ3Gr4g3uSoF_QBirf9UKMTFOXaq2UXhKA@cgxZLmmEIrze6grPCwfGr480Zh5pyDdd7vhTYwknMR5iQV0FoQ@cgxZLmCKIbPa4wvPC2r0owoO4fzAqcwTQ_80vx0_KpdnVg@cgxZdTXtIO-J6w6YCAat5iSS-YUO5fGvaS3tYuvqnw97ZtgdbfSqnlzIJ2E@cgxZdTXtIOzTvg3LCQD_58CRk80LqHQu7Shzjx5XlXtRDnsog8mJciVOto8@M7VjACAah6pagJGzjBrUo7Yi9UJAFs0_M1c6PRzvCTibczoU@cgxZLmSLJbLe4gfNCgbGr5wDGJgz3fSYSwKAqKT0AFtfw-M7Mg
+cgxZdTXtXs2liH2RYWz4kChgrRopFEXA9dnAfcWWoJuMCMMdiBNJ9nQ@cgxZdTXtffqgrn2TX1DMlt-HjpCQ3LFw5hceOrAmk6YfLQUVnbRmhNk@cgxZdTXtfu-Qi3e4fmDzvTsiUwZO2dHkx7nsTvxKRauWXeJLbm-bub4`
 ];
 !(async () => {
   await requireConfig();
@@ -184,37 +185,6 @@ function pkCollectScore() {
     })
   })
 }
-
-
-function getTaskList(body={}) {
-  return new Promise(resolve => {
-    $.post(taskPostUrl("nian_getTaskDetail", body, "nian_getTaskDetail"), async (err, resp, data) => {
-      try {
-        if (err) {
-          console.log(`${JSON.stringify(err)}`)
-          console.log(`${$.name} API请求失败，请检查网路重试`)
-        } else {
-          if (safeGet(data)) {
-            data = JSON.parse(data);
-            if (data.data.bizCode === 0) {
-              if(JSON.stringify(body)==="{}") {
-                $.taskVos = data.data.result.taskVos;//任务列表
-                console.log(`您的好友助力码为${data.data.result.inviteId}`)
-               }
-              // $.userInfo = data.data.result.userInfo;
-            }
-          }
-        }
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve();
-      }
-    })
-  })
-}
-
-
 function pkTaskDetail() {
   return new Promise(resolve => {
     $.post(taskPostUrl("nian_pk_getTaskDetail", {}, "nian_pk_getTaskDetail"), async (err, resp, data) => {
