@@ -1,7 +1,7 @@
 /*
-京东手机年终奖
+京东手机年终奖@shylocks
 活动时间：2021年1月26日～2021年2月8日
-更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_festival.js
+//re code羊毛群
 活动入口：https://shopping-festival.m.jd.com
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
@@ -17,8 +17,8 @@ let cookiesArr = [], cookie = '', message;
 const randomCount = $.isNode() ? 20 : 5;
 
 const inviteCodes = [
-  `649db6e0-496e-4826-a1c1-fdedaffa0828@173b905b-476f-4307-a5d3-cf8ccf213bcc@316498ff-7d3c-4aa5-9467-06f32a7535e9`,
-  `649db6e0-496e-4826-a1c1-fdedaffa0828@de8155ad-46d1-4489-b4b9-605f44d65cb7@e61b6ada-3c4a-4431-8d7c-df1e290a77fe`
+  `649db6e0-496e-4826-a1c1-fdedaffa0828@173b905b-476f-4307-a5d3-cf8ccf213bcc@316498ff-7d3c-4aa5-9467-06f32a7535e9@f274b22c-2e7c-454d-bbda-264c7bfb4720`,
+  `649db6e0-496e-4826-a1c1-fdedaffa0828@de8155ad-46d1-4489-b4b9-605f44d65cb7@e61b6ada-3c4a-4431-8d7c-df1e290a77fe@c2dddbd5-a90e-40b8-b681-7ac3ce796043@d9449f18-3a5b-470e-93dd-9cb60c8feb2c`
 ];
 
 if ($.isNode()) {
