@@ -151,7 +151,7 @@
        "使用说明:",
 	     "为了一步到位成功，❗请按以下步骤操作❗，尽量避免出错。老鸟飘过(*^_^*)",
 	      "1.点开【<a href=\"https://raw.githubusercontent.com/xingliuchao/jd/main/ps.txt\">ps.txt</a>】，添加引用获取Cookie与Task.注意要启用→重写引用",
-	      "获取videoheader，videobody，goldbody后启用task,脚本运行时尽量不刷视频",
+	      "获取videoheader，videobody，goldbody后启用task,脚本运行时尽量不刷视频。直播时间8-23",
 	      "2.❗️多账号需要更改下面的序号，直接卸载程序再登录",
               "3.完成后禁用重写规则，感谢zhiyiN大佬"],
     "keys": ["videoheader", "videobody", "goldbody", "videoheader2", "videobody2", "goldbody2","videoheader3", "videobody3", "goldbody3","videoheader4", "videobody4", "goldbody4"],
