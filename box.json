@@ -139,6 +139,7 @@
 	      "进入刚才那个网页并刷新网页",
               "3.❗️完成后禁用重写规则，感谢sunert大佬"],
     "keys": ["CookieTB"],
+    "keys": ["UA"],
     "author": "@chavyleung-xingliuchao",
     "repo": "https://github.com/sazs34/TaskConfig/blob/master/task/sign_baidu_tieba_v2.js",
     "script": "https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js",
