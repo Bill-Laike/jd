@@ -462,7 +462,7 @@ function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
     $.get({
-      url: `http://jd.turinglabs.net/api/v2/jd/5g/read/${randomCount}/`,
+      url: `https://raw.githubusercontent.com/xingliuchao/jd/main/ShareCodes/jd_5g.json`,
       'timeout': 10000
     }, (err, resp, data) => {
       try {
