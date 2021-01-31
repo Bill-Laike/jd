@@ -1,7 +1,7 @@
 /*
-红包现金签到lxk
+签到领现金，每日2毛～5毛
  */
-const $ = new Env('红包现金签到');
+const $ = new Env('签到领现金');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -11,8 +11,8 @@ let cookiesArr = [], cookie = '', message;
 let helpAuthor = true;
 const randomCount = $.isNode() ? 20 : 5;
 const inviteCodes = [
-  `eU9YauywMKh08GmBnScV3w`,
-  `eU9YauywMKh08GmBnScV3w`
+  `-4msulYas0O2JsRhE-2TA5XZmBQ@eU9YauywMKh08GmBnScV3w@eU9YaO7jMvwh-W_VzyUX0Q@eU9YaurkY69zoj3UniVAgg@eU9YaOnjYK4j-GvWmXIWhA`,
+  `-4msulYas0O2JsRhE-2TA5XZmBQ@eU9YauywMKh08GmBnScV3w@eU9YaO7jMvwh-W_VzyUX0Q@eU9YaurkY69zoj3UniVAgg@eU9YaOnjYK4j-GvWmXIWhA`
 ]
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -241,7 +241,7 @@ function showMsg() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `https://raw.githubusercontent.com/xingliuchao/jd/main/ShareCodes/jd_qdhb.json`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: `https://code.chiang.fun/api/v1/jd/jdcash/read/${randomCount}/`, 'timeout': 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
@@ -347,7 +347,7 @@ function taskUrl(functionId, body = {}) {
 
 function getAuthorShareCode() {
   return new Promise(resolve => {
-    $.get({url: "https://github.com/xingliuchao/jd/blob/main/ShareCodes/jd_qdhb.json",headers:{
+    $.get({url: "https://raw.githubusercontent.com/xingliuchao/jd/main/ShareCodes/jd_qdhb.json",headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
       }}, async (err, resp, data) => {
       $.authorCode = [];
