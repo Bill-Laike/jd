@@ -227,7 +227,7 @@ function taskPostUrl(functionId, body = {}) {
 function readShareCode() {
     console.log(`开始`)
     return new Promise(async resolve => {
-        $.get({ url: `https://raw.githubusercontent.com/xingliuchao/jd/main/ShareCodes/jd_ysq.json` }, (err, resp, data) => {
+        $.get({ url: `https://api.r2ray.com/jd.newYearMoney/index?num=${randomCount}` }, (err, resp, data) => {
             try {
                 if (err) {
                     console.log(`${JSON.stringify(err)}`)
