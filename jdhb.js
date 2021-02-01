@@ -1,7 +1,7 @@
 /*
 签到领现金，每日2毛～5毛
  */
-const $ = new Env('签到领现金');
+const $ = new Env('签到领红包现金');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -11,7 +11,7 @@ let cookiesArr = [], cookie = '', message;
 let helpAuthor = true;
 const randomCount = $.isNode() ? 20 : 5;
 const inviteCodes = [
-  `eU9YauywMKh08GmBnScV3w@eU9YFr3BIZljrTuTmiRZ@eU9YaOqwNf0joD_UyXMR1w@eU9YPZTSGIJfhwa0miZw`,
+  `eU9YauywMKh08GmBnScV3w@eU9YFr3BIZljrTuTmiRZ@eU9YaOqwNf0joD_UyXMR1w@eU9YPZTSGIJfhwa0miZw@Ihg-aem7b_4n8Ga6iw`,
   `eU9YauywMKh08GmBnScV3w@eU9Ya-2xZ6ov8jvTmXUQgw@eU9YNazIIo98pjuwsgpq@eU9YNrn4B4VXhwuPmQdX@IhgxbOi6Y_8k82y6iw`
 ]
 if ($.isNode()) {
