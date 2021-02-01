@@ -1,4 +1,6 @@
- */
+/*
+压岁钱
+*/
 const $ = new Env('京东压岁钱');
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
