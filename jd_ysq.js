@@ -1,15 +1,13 @@
-/*
-京东压岁钱
  */
-const $ = new Env('新年压岁钱');
+const $ = new Env('京东压岁钱');
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
-const randomCount = $.isNode() ? 1 : 1;
+const randomCount = $.isNode() ? 2 : 2;
 const inviteCodes = [
-    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83PwN5rE0Cj`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Pzd_rBdRX`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`,`oMZeXu4aqYJSBuU2YeRz9nZliDfK2wnuY9bDSR62YdB5cifJ`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2emCULiN2D0J`,`oMZeXOdLod1eALc3ZbZzqrHagearSIi9XYsuGFnQ7NT_ze7D`,`oMZeCp4o3vUudYpQZuUTs3dkkzt2zXflqZEJnhAOSY6lmeA`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2e-LXLyW13s`,
-    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83PwN5rE0Cj`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Pzd_rBdRX`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2emCULiN2D0`,`-5E3W-JApYhVAeBed_w8s0eT2kpi3SqAMlaKtsXINXUy`,`oMZeAqYy5PgNVLdUTskJs7B-Tx4L2yG26ojZwgvsHgt5uXc`,`BK84pSUrMwNbBy_g-3H2BNG0lQNKWfvCJk9CwViHpu`,`oMZeAbMCwfImdYdrZcQ0s3ORdWB8d71NRmS1XY4i4wnOabw`
+    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8zIzN1RcqBH`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Pzd_rBdRX`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`,`oMZeXu4aqYJSBuU2YeRz9nZliDfK2wnuY9bDSR62YdB5cifJ`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2emCULiN2D0J`,`oMZeXOdLod1eALc3ZbZzqrHagearSIi9XYsuGFnQ7NT_ze7D`,`oMZeCp4o3vUudYpQZuUTs3dkkzt2zXflqZEJnhAOSY6lmeA`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2e-LXLyW13s`,
+    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83PwN5rE0Cj`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8zLxNDXc47V`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`,`oMZeIbc75-4SX7d3Zuc6szZaOVCn5q4XSEkM2emCULiN2D0`,`-5E3W-JApYhVAeBed_w8s0eT2kpi3SqAMlaKtsXINXUy`,`oMZeAqYy5PgNVLdUTskJs7B-Tx4L2yG26ojZwgvsHgt5uXc`,`BK84pSUrMwNbBy_g-3H2BNG0lQNKWfvCJk9CwViHpu`,`oMZeAbMCwfImdYdrZcQ0s3ORdWB8d71NRmS1XY4i4wnOabw`
 ]
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
@@ -143,7 +141,7 @@ async function helpFriends() {
         }
         await $.wait(2000);
     }
-    await submitShareCode({ 'shareCode': $.userInfo.inviteId }, 'new');
+    await submitShareCode({ 'shareCode': $.userInfo.inviteId ,'pt_key':$.UserName}, 'new');
 }
 
 async function requireBaseConfig(noti = 'false') {
