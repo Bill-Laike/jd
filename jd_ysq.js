@@ -1,6 +1,5 @@
 /*
 京东压岁钱
-
  */
 const $ = new Env('新年压岁钱');
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -9,8 +8,8 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let cookiesArr = [], cookie = '';
 const randomCount = $.isNode() ? 1 : 1;
 const inviteCodes = [
-    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,
-    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`
+    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83PwN5rE0Cj`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Pzd_rBdRX`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`,
+    `oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz8rHzNDIq3Mf`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83PwN5rE0Cj`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Pzd_rBdRX`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83Mxty0Yzhr`,`oMZeXeZK9t8FAuVlYeR29rkGvw9kegS-Am3kz83NxNrtxuKU`
 ]
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
