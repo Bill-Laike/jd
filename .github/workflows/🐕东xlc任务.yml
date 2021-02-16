@@ -74,7 +74,7 @@ jobs:
       - name: '运行 【🐕喜工厂】'
         run: |
           cd ~/jd
-          node jx_gc2.js
+          node jx_gc.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           
