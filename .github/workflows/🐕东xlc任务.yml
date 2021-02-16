@@ -1,0 +1,93 @@
+
+name: 🐕东xlc任务
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 * * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: 🐕东xlc任务
+jobs:
+  build:
+    env:
+      JD_COOKIE: ${{ secrets.JD_COOKIE }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        if: env.JD_COOKIE
+        run: |
+          git clone https://github.com/xingliuchao/jd.git ~/jd
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        if: env.JD_COOKIE
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        if: env.JD_COOKIE
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package.json') }}
+      - name: npm install
+        if: env.JD_COOKIE
+        run: |
+          cd ~/jd
+          git checkout main
+          npm install
+
+      - name: '运行 【🐕东工厂】'
+        run: |
+          cd ~/jd
+          node jd_ddgc.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          
+      - name: '运行 【🐕东种豆得豆】'
+        run: |
+          cd ~/jd
+          node jd_zd.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}      
+
+      - name: '运行 【🐕东萌宠】'
+        run: |
+          cd ~/jd
+          node jd_mc.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}    
+
+      - name: '运行 【🐕东农厂】'
+        run: |
+          cd ~/jd
+          node jd_ddnc.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【🐕喜工厂】'
+        run: |
+          cd ~/jd
+          node jx_gc.js 
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          
+      - name: '运行 【🐕东现金红包】'
+        run: |
+          cd ~/jd
+          node jdhb.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+
+      - name: '运行 【🐕东盲盒】'
+        run: |
+          cd ~/jd
+          node jd_sgmh.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+     
