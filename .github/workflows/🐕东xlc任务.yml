@@ -1,10 +1,9 @@
 
 name: 🐕东xlc任务
-
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '5 */6 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -27,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Cache node_modules
         if: env.JD_COOKIE
-        uses: actions/cache@v2
+        uses: actions/cache@v2 
         env:
           cache-name: cache-node-modules
         with:
@@ -39,27 +38,30 @@ jobs:
           cd ~/jd
           git checkout main
           npm install
-
       - name: '运行 【🐕东工厂】'
         run: |
           cd ~/jd
           node jd_ddgc.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          
+
+
       - name: '运行 【🐕东种豆得豆】'
         run: |
           cd ~/jd
           node jd_zd.js
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}      
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
 
       - name: '运行 【🐕东萌宠】'
         run: |
           cd ~/jd
           node jd_mc.js
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}    
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+
 
       - name: '运行 【🐕东农厂】'
         run: |
@@ -67,14 +69,16 @@ jobs:
           node jd_ddnc.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+  
 
       - name: '运行 【🐕喜工厂】'
         run: |
           cd ~/jd
-          node jx_gc.js 
+          node jx_gc.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           
+
       - name: '运行 【🐕东现金红包】'
         run: |
           cd ~/jd
@@ -83,11 +87,11 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
 
+
       - name: '运行 【🐕东盲盒】'
         run: |
           cd ~/jd
           node jd_sgmh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-
-     
+         
