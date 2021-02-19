@@ -63,11 +63,11 @@ jobs:
                  PUSH_KEY: ${{ secrets.PUSH_KEY }}
 
 
-            - name: '运行 【🐕东盲盒】'
-              run: |
-               node jd_sgmh.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            #- name: '运行 【🐕东盲盒】'
+              #run: |
+               #node jd_sgmh.js
+              #env:
+                #JD_COOKIE: ${{ secrets.JD_COOKIE }}
          
 
       
