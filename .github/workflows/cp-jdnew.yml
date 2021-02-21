@@ -2,7 +2,7 @@ name: cp-jdnew
 on:
   workflow_dispatch:
   schedule:
-    - cron: '8 */3 * * *'
+    - cron: '8 */4 * * *'
   watch:
     types: started
   repository_dispatch:
