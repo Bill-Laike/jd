@@ -1,4 +1,4 @@
-name: cp-jd
+name: cp-jdnew
 on:
   workflow_dispatch:
   schedule:
