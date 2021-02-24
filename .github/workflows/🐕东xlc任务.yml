@@ -22,65 +22,56 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: '运行 【🐕东农场】'
+            - name: '运行 【🐕东工厂】'
               run: |
-               node xlcsecret.js
+               node jd_ddgc.js
               env:
                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-               SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jd_ddnc.js
-               
 
-            - name: '运行 【🐕种豆】'
+            - name: '运行 【🐕东种豆得豆】'
               run: |
-               node xlcsecret.js
+               node jd_zd.js
               env:
                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-               SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jd_zd.js
+
 
             - name: '运行 【🐕东萌宠】'
               run: |
-                node xlcsecret.js
+                node jd_mc.js
               env:
                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-               SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jd_mc.js
 
             - name: '运行 【🐕东农厂】'
               run: |
-                node xlcsecret.js
+                node jd_ddnc.js
               env:
                  JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                 SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/ddnc.js
   
 
             - name: '运行 【🐕喜工厂】'
               run: |
-                node xlcsecret.js
+                node jx_gc.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jx_gc.js
           
 
             - name: '运行 【🐕东现金红包】'
               run: |
-               node xlcsecret.js
+               node jdhb.js
               env:
                  JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                 SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jdhb.js
+                 PUSH_KEY: ${{ secrets.PUSH_KEY }}
 
 
             - name: '运行 【🐕东美研院】'
               run: |
-               node xlcsecret.js
+               node jd_beauty.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jd_beauty.js
+                
                 
             - name: '运行 【🐕东取关】'
               run: |
-               node xlcsecret.js
+               node jd_unsubscribe.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                SYNCURL: https://raw.githubusercontent.com/xingliuchao/jd/main/jd_unsubscribe.js
-         
-
-      
