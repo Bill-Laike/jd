@@ -68,6 +68,13 @@ jobs:
                node jd_beauty.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                
+                
+            - name: '运行 【🐕东取关】'
+              run: |
+               node jd_unsubscribe.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
          
 
       
